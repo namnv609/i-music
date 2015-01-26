@@ -1,0 +1,11 @@
+{
+    "name" : "iMusic",
+    "description" : "Online interactive music",
+    "author" : "NamNV609",
+    "version" : "1.0.0",
+    "devDependencies" : {
+        "socket.io" : "latest",
+        "http-get" : "latest",
+        "icecast-stack" : "latest"
+    }
+}

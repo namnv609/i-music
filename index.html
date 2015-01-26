@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>Document</title>
+    <style>
+        #song-name {
+            padding: 5px;
+            border: 1px solid #000;
+            background: #FFF;
+            width: 40%;
+        }
+        #results {
+            margin: 1rem 0;
+        }
+        #results p span {
+            text-indent: 20px;
+            display: block;
+        }
+        #search {
+            background: #008A45;
+            text-decoration: none;
+            color: #FFF;
+            padding: 5px 2rem;
+            border: 1px solid #000;
+        }
+        .song-item {
+            color: #00F;
+            text-decoration: none;
+        }
+        .song-item:hover {
+            color: #F00;
+            text-decoration: underline;
+        }
+        .playing:before {
+            content: "► ";
+        }
+        #accept-btn {
+            padding: 1rem 2rem;
+            border: 0;
+            background: #008A45;
+            color: #FFF;
+            cursor: pointer;
+        }
+        #playlist {
+            width: 400px;
+            position: absolute;
+            right: 1px;
+            top: 0;
+            border: 1px solid #000;
+            min-height: 100%;
+            max-height: 100%;
+            overflow-y: scroll;
+        }
+        #playlist ul {
+            margin: 0;
+            padding: 0;
+        }
+        #playlist ul li {
+            list-style: none;
+            padding: 10px;
+            background: #CCC;
+            margin: 0 0 10px 0;
+        }
+        #playlist ul li:last-child {
+            margin: 0;
+        }
+        #playlist ul li >span {
+            display: block;
+            color: #F00;
+        }
+        #playlist ul li >span:before {
+            content: '- ';
+        }
+
+    </style>
+    <script src="http://localhost/cdn/jquery.min.js"></script>
+    <script src="http://127.0.0.1:6969/socket.io/socket.io.js"></script>
+    <script src="http://localhost/cdn/jquery.query-yql.min.js"></script>
+    <script src="client.js"></script>
+</head>
+<body>
+	Song name: <input type="text" id="song-name" value="gio em the nao" autofocus="autofocus" /> <a href="#" id="search">Search</a>
+    <div id="results"></div>
+    <div id="player">
+        <audio autoplay controls></audio>
+    </div>
+    <button id="accept-btn">Accept</button>
+    <div id="playlist">
+        <ul></ul>
+    </div>
+</body>
+</html>
